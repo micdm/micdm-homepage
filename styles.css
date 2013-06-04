@@ -48,10 +48,3 @@ li {
     left: 448px;
     top: 130px;
 }
-
-#projects {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
-}
