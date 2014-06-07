@@ -12,8 +12,8 @@ html, body {
 
 body {
     background: #333 url(tactile_noise.png);
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     color: #DDD;
     text-shadow: 0 0 5px black;
 }
@@ -31,8 +31,7 @@ a:hover {
 ul {
     margin: 0;
     padding: 0 0 0 20px;
-    list-style-type: none;
-    list-style-position: inside;
+    list-style: none inside;
 }
 
 li {
@@ -43,17 +42,20 @@ li {
     position: absolute;
     left: 50%;
     top: 50%;
-    background: no-repeat left center url(logo.png);
-    width: 500px;
-    padding-left: 290px;
-    margin: -140px 0 0 -300px;
+    background: no-repeat 60px 25px url(logo.png);
+    width: 700px;
+    margin: -140px 0 0 -350px;
+}
+
+.links, .contacts {
+    margin-left: 350px;
 }
 
 .icon {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: left center no-repeat url(icons.png);
+    background: no-repeat url(icons.png);
     margin-right: 5px;
     vertical-align: middle;
 }
@@ -72,4 +74,9 @@ li {
 
 .icon_icq {
     background-position: -60px 0;
+}
+
+.about {
+    margin-top: 80px;
+    text-align: center;
 }
