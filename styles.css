@@ -42,9 +42,10 @@ li {
     position: absolute;
     left: 50%;
     top: 50%;
-    background: no-repeat 60px 25px url(logo.png);
+    background: no-repeat 60px center url(logo.png);
     width: 700px;
-    margin: -140px 0 0 -350px;
+    height: 196px;
+    margin: -114px 0 0 -350px;
 }
 
 .links, .contacts {
@@ -74,6 +75,10 @@ li {
 
 .icon_icq {
     background-position: -60px 0;
+}
+
+.icon_vk {
+    background-position: -80px 0;
 }
 
 .about {
