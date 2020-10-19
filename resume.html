@@ -96,14 +96,12 @@
         </p>
 
         <h2>Прочее</h2>
-        <p>Родился в октябре 1987-го года. <span id="age_container" class="hidden">Eсли часы на вашем компьютере идут верно, cейчас мне <span id="age"></span>.</span></p>
+        <p>Родился в октябре 1987-го года. <span id="age_container" class="hidden">Сейчас мне <span id="age"></span>.</span></p>
         <p>
             С отличием закончил среднюю школу. Состоял студентом факультета автоматики и вычислительной техники Томского политехнического университета,
             откуда был отчислен за неуспеваемость.
         </p>
-        <p id="experience_container" class="hidden">
-            Работаю по разным офисам программистом вот уже <span id="experience"></span>. Опять же, если ваши часы не врут.
-        </p>
+        <p id="experience_container" class="hidden">Работаю по разным офисам программистом вот уже <span id="experience"></span>.</p>
         <p>
             Интересуюсь всем околокомпьютерным, стараюсь следить за модой и новинками в IT, регулярно читаю тематические статьи,
             пробую новые технологии в хобби-проектах. Правда, на нынешнем жизненном этапе со свободным временем стало совсем туго.
@@ -120,7 +118,7 @@
         </p>
         <p>Живу в городе Томске, разница с Москвой — +4 часа.</p>
         <p>Женат, есть дети.</p>
-        <p>Мечтаю найти тёплый технически грамотный коллектив, чтобы набираться новых знаний и сообща творить полезные штуки.</p>
+        <p>Мечтаю найти тёплый технически грамотный коллектив, чтобы набираться новых знаний и сообща творить разные полезные штуки.</p>
 
         <h2>Ссылки</h2>
         <ul>
@@ -212,13 +210,18 @@
                     console.log(testCases.length + " tests passed");
                 };
 
-                if (/.+test$/.test(location.href)) {
+                window.testAll = function() {
                     testGetYears();
                     testGetAgeString();
+                };
+
+                if (window.console) {
+                    console.info("Input \"testAll()\" to run a test suite");
                 }
 
-                document.getElementById("age").innerText = getAgeString(getYears(BIRTHDAY, new Date()));
-                document.getElementById("experience").innerText = getAgeString(getYears(FIRST_WORKDAY, new Date()));
+                var now = new Date("<!--# echo var="time_iso8601" -->");
+                document.getElementById("age").innerText = getAgeString(getYears(BIRTHDAY, now));
+                document.getElementById("experience").innerText = getAgeString(getYears(FIRST_WORKDAY, now));
 
                 // Если JS включен, элементы стоит показать:
                 ["age_container", "experience_container"].forEach(function(item) {
